@@ -11,6 +11,7 @@
 // RP6502 RIA $FFE0-$FFF9
 
 #include <stdint.h>
+#include <time.h>
 
 // UART
 #define RIA_TX_READY (*(uint8_t *)0xFFE0 & 0x80)
@@ -111,7 +112,5 @@ unsigned __fastcall__ phi2(void);
 unsigned __fastcall__ codepage(void);
 unsigned long __fastcall__ rand32(void);
 unsigned __fastcall__ rand16(void);
-int __fastcall__ get_rtc_time(datetime_t *datetime);
-int __fastcall__ set_rtc_time(const datetime_t *datetime);
 
 #endif /* _RP6502_H_ */
