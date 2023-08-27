@@ -11,7 +11,6 @@
 // RP6502 RIA $FFE0-$FFF9
 
 #include <stdint.h>
-#include <time.h>
 
 // UART
 #define RIA_TX_READY (*(uint8_t *)0xFFE0 & 0x80)
