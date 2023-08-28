@@ -35,6 +35,17 @@ int rtc(time_t *t)
 int __fastcall__ clock_gettime (clockid_t, struct timespec *tp)
 {
     int res;
+    tzset();
+    // _tz.daylight = 1;
+    // _tz.timezone = 8*60*60;
+    // _tz.tzname[0] = 'P';
+    // _tz.tzname[1] = 'S';
+    // _tz.tzname[2] = 'T';
+    // _tz.tzname[3] = 0;
+    // _tz.dstname[0] = 'P';
+    // _tz.dstname[1] = 'D';
+    // _tz.dstname[2] = 'T';
+    // _tz.dstname[3] = 0;
     res = rtc(&(tp->tv_sec));
     if (res < 0) {
         _seterrno(RIA_ERRNO_LO);

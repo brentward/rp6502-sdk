@@ -111,5 +111,6 @@ unsigned __fastcall__ phi2(void);
 unsigned __fastcall__ codepage(void);
 unsigned long __fastcall__ rand32(void);
 unsigned __fastcall__ rand16(void);
+void tzset(void);
 
 #endif /* _RP6502_H_ */
