@@ -16,7 +16,5 @@ int __fastcall__ clock_settime_(const time_t* timep)
 
 int __fastcall__ clock_settime(clockid_t, const struct timespec *tp)
 {
-    struct tm current_time;
-    datetime_t system_time;
     return clock_settime_(&(*tp).tv_sec);
 }
