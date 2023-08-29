@@ -13,15 +13,13 @@
         sta     ptr1
         stx     ptr1+1
 
-        ; Cleanup stack
-        jsr     incsp1
-
         ldy     #.sizeof(timespec)-1
 @L1:    lda     time,y
         sta     (ptr1),y
         dey
         bpl     @L1
 
+        jsr     incsp1
         jmp     return0
 
 .endproc

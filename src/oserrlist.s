@@ -62,4 +62,8 @@ __sys_oserrlist:
         sys_oserr_entry         17, "LFN working buffer could not be allocated"
         sys_oserr_entry         18, "Number of open files > FF_FS_LOCK"
         sys_oserr_entry         19, "Given parameter is invalid"
+        sys_oserr_entry         20, "The RTC is not set"
+        sys_oserr_entry         21, "The datetime object is invalid"
+        sys_oserr_entry         22, "The RTC is waiting for NTP response"
+        
         sys_oserr_sentinel      "Unknown error"

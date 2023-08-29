@@ -57,5 +57,8 @@ ErrTab:
         .byte 17, ENOMEM    ; FR_NOT_ENOUGH_CORE,    (17) LFN working buffer could not be allocated
         .byte 18, EMFILE    ; FR_TOO_MANY_OPEN_FILES (18) Number of open files > FF_FS_LOCK
         .byte 19, EINVAL    ; FR_INVALID_PARAMETER   (19) Given parameter is invalid
+        .byte 20, EINVAL    ; RTC_NOT_SET            (20) The RTC is not set
+        .byte 21, EINVAL    ; RTC_INVALID_DATETIME   (21) The datetime object is invalid
+        .byte 22, EBUSY     ; RTC_NTP_PENDING        (22) The RTC is waiting for NTP response
 
 ErrTabSize = (* - ErrTab)
